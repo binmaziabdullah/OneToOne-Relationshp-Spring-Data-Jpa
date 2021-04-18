@@ -19,18 +19,23 @@ public class EmployeeService {
         this.employeeRepository = employeeRepository;
     }
 
-    public List<Employee> findALlEmployee(){
+    /*read Employee*/
+    public List<Employee> findALlEmployee() {
         return employeeRepository.findAll();
     }
 
     /*Save Employee*/
-    public void addEmployee(Employee employee){
+    public void addEmployee(Employee employee) {
         employeeRepository.save(employee);
     }
 
     /*delete Employee*/
-    public int deleteStudentById(Long id){
+    public int deleteStudentById(Long id) {
         return employeeRepository.deleteEmployeeById(id);
     }
 
+    /*update Employee*/
+    public void updateEmployee(Employee employee) {
+        employeeRepository.save(employee);
+    }
 }

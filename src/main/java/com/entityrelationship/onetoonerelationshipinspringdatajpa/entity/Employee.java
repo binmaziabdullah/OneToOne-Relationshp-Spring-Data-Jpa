@@ -1,5 +1,6 @@
 package com.entityrelationship.onetoonerelationshipinspringdatajpa.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,8 +22,9 @@ public class Employee {
     private String empDegree;
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "dep_id", referencedColumnName = "id", nullable = false)
-
+    @JoinColumn(name = "dep_id", referencedColumnName = "id")
+    @JsonBackReference
     private Department department;
+
 
 }
