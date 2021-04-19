@@ -1,24 +1,27 @@
 package com.entityrelationship.onetoonerelationshipinspringdatajpa.entity;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
+@Table(name = "cars")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Department {
+public class Car {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String dep_Name;
+    private Long carId;
+    private String carName;
+    private String carModel;
+    private Integer modelYear;
 
-    @OneToOne(mappedBy = "department", fetch = FetchType.LAZY)
-    @JsonManagedReference
-    private Employee employee;
+    @OneToMany(mappedBy = "cars", fetch = FetchType.LAZY)
+    private List<Features> features;
+
 }

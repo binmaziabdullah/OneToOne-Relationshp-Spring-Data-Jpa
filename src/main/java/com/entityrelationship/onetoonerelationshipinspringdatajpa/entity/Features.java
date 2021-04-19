@@ -1,6 +1,5 @@
 package com.entityrelationship.onetoonerelationshipinspringdatajpa.entity;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,20 +10,21 @@ import javax.persistence.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Employee {
+public class Features {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String empName;
-    private Integer empSalary;
-    private String empDegree;
+    private String feature_One;
+    private String feature_Two;
+    private String feature_Three;
+    private String feature_Four;
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "dep_id", referencedColumnName = "id")
-    @JsonBackReference
-    private Department department;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "carId", referencedColumnName = "carId")
+    private Car cars;
+
 
 
 }
