@@ -31,7 +31,7 @@ public class FeaturesService {
 
     /*delete Features*/
     public int deleteFeaturesById(Long id) {
-        return featuresRepository.deleteEmployeeById(id);
+        return featuresRepository.deleteFeaturesById(id);
     }
 
     /*update Features*/

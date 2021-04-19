@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 public interface FeaturesRepository extends JpaRepository<Features, Long> {
 
     @Modifying
-    @Query("delete from Employee e where e.id = :id")
-    int deleteEmployeeById(@Param("id") Long id);
+    @Query("delete from Features f where f.id = :id")
+    int deleteFeaturesById(@Param("id") Long id);
 
 }
