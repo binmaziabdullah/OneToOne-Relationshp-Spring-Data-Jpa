@@ -1,10 +1,10 @@
-package com.entityrelationship.onetoonerelationshipinspringdatajpa;
+package com.entityrelationship.manytomanyelationshipinspringdatajpa;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class OnetoonerelationshipInSpringdatajpaApplicationTests {
+class onetoonerelationshipInSpringdatajpaApplicationTests {
 
 	@Test
 	void contextLoads() {
