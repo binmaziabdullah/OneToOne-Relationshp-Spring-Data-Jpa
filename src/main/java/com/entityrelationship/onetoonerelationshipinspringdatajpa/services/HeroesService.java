@@ -1,7 +1,7 @@
-package com.entityrelationship.onetoonerelationshipInSpringdatajp.services;
+package com.entityrelationship.onetoonerelationshipinspringdatajpa.services;
 
-import com.entityrelationship.onetoonerelationshipInSpringdatajp.entity.Heroes;
-import com.entityrelationship.onetoonerelationshipInSpringdatajp.repository.HeroesRepository;
+import com.entityrelationship.onetoonerelationshipinspringdatajpa.entity.Heroes;
+import com.entityrelationship.onetoonerelationshipinspringdatajpa.repository.HeroesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

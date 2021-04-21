@@ -1,7 +1,7 @@
-package com.entityrelationship.manytomanyelationshipinspringdatajpa.services;
+package com.entityrelationship.onetoonerelationshipinspringdatajpa.services;
 
-import com.entityrelationship.manytomanyelationshipinspringdatajpa.entity.Movies;
-import com.entityrelationship.manytomanyelationshipinspringdatajpa.repository.MoviesRepository;
+import com.entityrelationship.onetoonerelationshipinspringdatajpa.entity.Movies;
+import com.entityrelationship.onetoonerelationshipinspringdatajpa.repository.MoviesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

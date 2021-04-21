@@ -1,4 +1,4 @@
-package com.entityrelationship.onetoonerelationshipInSpringdatajp.entity;
+package com.entityrelationship.onetoonerelationshipinspringdatajpa.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,20 +11,15 @@ import java.util.Set;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Heroes {
 
+public class Heroes {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long heroId;
     private String heroName;
     private Integer heroSalary;
 
-    @ManyToMany(cascade = CascadeType.PERSIST,fetch = FetchType.EAGER)
-    @JoinTable(name = "heroesMovie",
-    joinColumns = {@JoinColumn(name = "heroId")},
-    inverseJoinColumns = {@JoinColumn(name = "movieId")})
+    @ManyToMany(mappedBy = "heroes",cascade = CascadeType.PERSIST,fetch = FetchType.EAGER)
     private Set<Movies> movies;
-
-
 
 }

@@ -1,6 +1,6 @@
-package com.entityrelationship.onetoonerelationshipInSpringdatajp.repository;
+package com.entityrelationship.onetoonerelationshipinspringdatajpa.repository;
 
-import com.entityrelationship.onetoonerelationshipInSpringdatajp.entity.Movies;
+import com.entityrelationship.onetoonerelationshipinspringdatajpa.entity.Movies;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

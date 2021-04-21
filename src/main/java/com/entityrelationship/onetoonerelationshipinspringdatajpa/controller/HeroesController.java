@@ -1,7 +1,7 @@
-package com.entityrelationship.manytomanyelationshipinspringdatajpa.controller;
+package com.entityrelationship.onetoonerelationshipinspringdatajpa.controller;
 
-import com.entityrelationship.manytomanyelationshipinspringdatajpa.entity.Heroes;
-import com.entityrelationship.manytomanyelationshipinspringdatajpa.services.HeroesService;
+import com.entityrelationship.onetoonerelationshipinspringdatajpa.entity.Heroes;
+import com.entityrelationship.onetoonerelationshipinspringdatajpa.services.HeroesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

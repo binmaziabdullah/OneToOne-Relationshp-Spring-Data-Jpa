@@ -1,7 +1,7 @@
-package com.entityrelationship.onetoonerelationshipInSpringdatajp.controller;
+package com.entityrelationship.onetoonerelationshipinspringdatajpa.controller;
 
-import com.entityrelationship.onetoonerelationshipInSpringdatajp.entity.Movies;
-import com.entityrelationship.onetoonerelationshipInSpringdatajp.services.MoviesService;
+import com.entityrelationship.onetoonerelationshipinspringdatajpa.entity.Movies;
+import com.entityrelationship.onetoonerelationshipinspringdatajpa.services.MoviesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
