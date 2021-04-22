@@ -5,7 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.Set;
 
 @Entity
 @Data
@@ -18,8 +17,5 @@ public class Heroes {
     private Long heroId;
     private String heroName;
     private Integer heroSalary;
-
-    @ManyToMany(mappedBy = "heroes",cascade = CascadeType.PERSIST,fetch = FetchType.EAGER)
-    private Set<Movies> movies;
 
 }
