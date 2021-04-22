@@ -3,7 +3,6 @@ package com.entityrelationship.onetoonerelationshipinspringdatajpa.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -12,7 +11,6 @@ import java.util.Set;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@DynamicUpdate
 public class Movies {
 
     @Id
@@ -22,11 +20,7 @@ public class Movies {
     private Integer releaseDate;
     private String movieRating;
 
-    @ManyToMany(cascade = CascadeType.MERGE,fetch = FetchType.LAZY)
-    @JoinTable(name = "heroesMovie",
-            joinColumns = @JoinColumn(name = "movieId" ),
-            inverseJoinColumns = @JoinColumn(name = "heroId"), uniqueConstraints = @UniqueConstraint(columnNames = {
-            "movieId", "heroId" }))
+    @ManyToMany(mappedBy = "movies",cascade = {CascadeType.PERSIST,CascadeType.MERGE},fetch = FetchType.EAGER)
     private Set<Heroes> heroes;
 
 
